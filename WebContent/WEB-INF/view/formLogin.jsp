@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>   
 <c:url value="/entrada" var="linkEntradaServlet"/>
 
@@ -9,20 +12,15 @@
 </head>
 <body>
 
-<c:import url="logout-parcial.jsp" />
-
-	Usuario Logado: ${usuarioLogado.login }
-
-	<br>
-	<br>
-	<br>
-
 	<form action="${linkEntradaServlet }" method="post">
-	    Nome: <input type="text" name="nome"  />
-	    Data Abertura: <input type="text" name="data"  />
-	    <input type="hidden" name="acao" value="NovaEmpresa">
+	    
+	    Login: <input type="text" name="login"  />
+	    Senha: <input type="password" name="senha"  />
+	    
+	    <input type="hidden" name="acao" value="Login">
 	    <input type="submit" />
-  
+	    
 	</form>
+  
 </body>
 </html>

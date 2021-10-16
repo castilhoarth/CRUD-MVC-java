@@ -17,6 +17,8 @@
 </head>
 <body>
 
+	<c:import url="logout-parcial.jsp" />
+
 	Lista de empresas
 	<hr>
 	<ul>
@@ -27,6 +29,10 @@
 			<a href="/gerenciador/entrada?acao=RemoveEmpresa&id=${empresa.id }">remove</a>
 		</c:forEach>
 	</ul>
+	
+	<hr>
+	
+	<a href="entrada?acao=NovaEmpresaForm">Inserir Nova Empresa</a>
 
 	
 </body>
